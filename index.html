@@ -18,28 +18,22 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="featured">
-        <h1>Featured Projects</h1>
-<br>
- <article class="feature_card">
-                <div  class="feature__content" >
-                    <img src="featured.jpg" alt="This is a photo to show featured project">
-                    <span >Web Design</span>
+    <main class="main_content">
+        <h3>Featured Projects</h3>
+
+ <article class="featured_card">
+                <div  class="featured-image-wrapper" >
+                    <img src="square-image.jpg" alt="This is a photo to show featured project"/>
                 </div>
 
-                <div class="feature_card">
-                    <h2 >Featured Portfolio </h2>
+                <div class="featured-content">
+                    <h3 >Featured Portfolio </h3>
                     <p >
 Welcome to Echo — a curated space where innovation meets creativity. Here, we spotlight featured projects that push boundaries, tell compelling stories, and inspire new ideas. Each project showcased on Echo represents a unique vision brought to life, offering a glimpse into the minds of creators who are shaping the future. Explore, discover, and let these standout works spark your own imagination.                    </p>
-                    <button class="feature__btn">View </button>
+                    <button class="featured__btn">View </button>
                 </div>
             </article>
-        </section>
-        <article>
-
-        </article>
-        </section>
+      
         
 
          <section class="contactus">
@@ -47,17 +41,15 @@ Welcome to Echo — a curated space where innovation meets creativity. Here, we 
             Contact us
         </h2>
         <form method="post" class="contactus_form">
-            <div class="form__group">
+            <div class="contactus__div">
                 <label for="name">Name : </label>
                 <input type="text" id="name" name="name" placeholder="Enter your name..." required>
             </div>
-<br>
-             <div  class="form__group">
+             <div  class="contactus__div">
                 <label for="name">Email : </label>
                 <input type="text" id="email" name="email" placeholder="Enter you email..." required>
             </div>
-             <br>
-               <div  class="form__group">
+               <div  class="contactus__div">
                     <label for="subject">Subject</label>
 
                     <select id="subject" required>
@@ -66,13 +58,13 @@ Welcome to Echo — a curated space where innovation meets creativity. Here, we 
                         <option>Complaint</option>
                         <option>Other</option>
                     </select>
-             <div  class="form__group">
+               </div>
+             <div  class="contactus__div">
                 <label for="name">Message : </label>
                 <textarea  id="message" name="message" rows="5" 
                 minlength="5"
                 placeholder="Please type your message here...." required></textarea>
             </div>
-             <br>
 <button type="submit"  class="send_btn">Send</button>
         </form>
     </section>
