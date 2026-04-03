@@ -60,7 +60,19 @@
 .send_btn:hover {
     background: silver;
 }
+.featured {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+     background: steelblue;
+     margin-left: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 
+}
 
 .contactus {
     padding: 40px 20px;
