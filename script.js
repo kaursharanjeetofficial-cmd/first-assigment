@@ -9,24 +9,28 @@ const projectsList = [
     description: "Shows weather info",
     category: "API",
     image: "square-image.jpg",
+    link:""
   },
   {
     title: "Portfolio Website",
     description: "My personal portfolio",
     category: "Web",
     image: "square-image.jpg",
+    link:""
   },
   {
     title: "Todo App",
     description: "Task manager app",
     category: "JavaScript",
-    image: "square-image.jpg"
+    image: "square-image.jpg",
+    link:""
  },
   {
     title: "Weather App",
     description: "Shows weather info",
     category: "API",
     image: "square-image.jpg",
+    link:""
   },
    {
     title: "Weather App",
@@ -39,12 +43,14 @@ const projectsList = [
     description: "My personal portfolio",
     category: "Web",
     image: "square-image.jpg",
+    link:""
   },
   {
     title: "Todo App",
     description: "Task manager app",
     category: "JavaScript",
     image: "square-image.jpg",
+    link:""
   }
 ];
 
