@@ -8,49 +8,49 @@ const projectsList = [
   title: "Study Planner App",
   description: "Track daily study tasks and progress",
   category: "Productivity",
-  image: "square-image.jpg",
+  image: "",
   link: ""
 },
 {
   title: "Expense Tracker",
   description: "Manage income and expenses",
   category: "Finance",
-  image: "placeholder.png",
+  image: "",
   link: ""
 },
 {
   title: "Event Planner",
   description: "Create and manage events",
   category: "Organization",
-  image: "square-image.jpg",
+  image: "",
   link: ""
 },
 {
   title: "Goal Tracker",
   description: "Track and achieve personal goals",
   category: "Productivity",
-  image: "placeholder.png",
+  image: "",
   link: ""
 },
 {
   title: "Bill Splitter",
   description: "Split bills among multiple people",
   category: "Utility",
-  image: "square-image.jpg",
+  image: "",
   link: ""
 },
 {
   title: "Fintech Dashboard",
   description: "Mobile finance app UI screens",
   category: "Mobile App",
-  image: "placeholder.png",
+  image: "",
   link: ""
 },
 {
   title: "E-Commerce UI Kit",
   description: "Shop screens with onboarding and input forms",
   category: "Web UI",
-  image: "placeholder.png",
+  image: "",
   link: ""
 }
 ];
