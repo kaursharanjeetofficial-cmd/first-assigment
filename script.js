@@ -5,53 +5,54 @@ const searchInput = document.getElementById("searchInput");
 const projectsList = [
 
     {
-    title: "Weather App",
-    description: "Shows weather info",
-    category: "API",
-    image: "square-image.jpg",
-    link:""
-  },
-  {
-    title: "Portfolio Website",
-    description: "My personal portfolio",
-    category: "Web",
-    image: "square-image.jpg",
-    link:""
-  },
-  {
-    title: "Todo App",
-    description: "Task manager app",
-    category: "JavaScript",
-    image: "square-image.jpg",
-    link:""
- },
-  {
-    title: "Weather App",
-    description: "Shows weather info",
-    category: "API",
-    image: "square-image.jpg",
-    link:""
-  },
-   {
-    title: "Weather App",
-    description: "Shows weather info",
-    category: "API",
-    image: "square-image.jpg",
-  },
-  {
-    title: "Portfolio Website",
-    description: "My personal portfolio",
-    category: "Web",
-    image: "square-image.jpg",
-    link:""
-  },
-  {
-    title: "Todo App",
-    description: "Task manager app",
-    category: "JavaScript",
-    image: "square-image.jpg",
-    link:""
-  }
+  title: "Study Planner App",
+  description: "Track daily study tasks and progress",
+  category: "Productivity",
+  image: "square-image.jpg",
+  link: ""
+},
+{
+  title: "Expense Tracker",
+  description: "Manage income and expenses",
+  category: "Finance",
+  image: "placeholder.png",
+  link: ""
+},
+{
+  title: "Event Planner",
+  description: "Create and manage events",
+  category: "Organization",
+  image: "square-image.jpg",
+  link: ""
+},
+{
+  title: "Goal Tracker",
+  description: "Track and achieve personal goals",
+  category: "Productivity",
+  image: "placeholder.png",
+  link: ""
+},
+{
+  title: "Bill Splitter",
+  description: "Split bills among multiple people",
+  category: "Utility",
+  image: "square-image.jpg",
+  link: ""
+},
+{
+  title: "Fintech Dashboard",
+  description: "Mobile finance app UI screens",
+  category: "Mobile App",
+  image: "placeholder.png",
+  link: ""
+},
+{
+  title: "E-Commerce UI Kit",
+  description: "Shop screens with onboarding and input forms",
+  category: "Web UI",
+  image: "placeholder.png",
+  link: ""
+}
 ];
 
 displayMyProjects(projectsList);
@@ -76,6 +77,7 @@ myProjects.innerHTML +=`
 <article class="projectCard">
         <div class="featured-image-wrapper">
   <img src=${element.image} alt="This is a photo to show featured project" />
+   <span class="badge">${element.category}</span>
   </div>
   <div class="featured-content">
    <h3>${element.title}</h3>
@@ -88,7 +90,6 @@ myProjects.innerHTML +=`
   });
 
 
-}
 
 
 searchInput.addEventListener("input",() => {
@@ -97,9 +98,10 @@ searchInput.addEventListener("input",() => {
 
   const filteredProjects = projectsList.filter(project =>
     project.title.toLowerCase().includes(searchValue) ||
-    project.description.toLowerCase().includes(searchValue)
+    project.description.toLowerCase().includes(searchValue) || project.category.toLowerCase().includes(searchValue)
   );
 
   displayMyProjects(filteredProjects);
 
   });
+}
