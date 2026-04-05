@@ -136,15 +136,12 @@ body {
 
 
 .my_projects {
-  display: flex;
-  gap: 20px;
+  gap: 1rem;
   justify-content: center;
-  overflow-x: auto;   
   padding: 10px;
-  scroll-behavior: smooth;
-  flex-direction: row;
-  flex-wrap: nowrap;
-   
+    display: grid;
+  grid-template-columns: 1fr;
+
 }
 
 
@@ -191,7 +188,11 @@ body {
   padding: 0.2rem 0.8rem;
 }
 
-
+@media (min-width: 1024px) {
+  .my_projects { grid-template-columns: repeat(3, 1fr); 
+  overflow-x: hidden; /* stop horizontal scroll */
+     display: grid;}
+}
 
 @media (max-width: 600px) {
     .navbar { flex-direction: column; gap: 15px; }
@@ -206,7 +207,7 @@ body {
     gap: 15px;
     overflow-x: hidden; /* stop horizontal scroll */
      display: grid;
-    padding: 10px; /* adds space around grid */
+    padding: 10px; 
   }
 
   .projectCard {

@@ -8,49 +8,49 @@ const projectsList = [
   title: "Study Planner App",
   description: "Track daily study tasks and progress",
   category: "Productivity",
-  image: "",
+  image: "square-image.jpg",
   link: ""
 },
 {
   title: "Expense Tracker",
   description: "Manage income and expenses",
   category: "Finance",
-  image: "",
+  image: "placeholder.png",
   link: ""
 },
 {
   title: "Event Planner",
   description: "Create and manage events",
   category: "Organization",
-  image: "",
+  image: "square-image.jpg",
   link: ""
 },
 {
   title: "Goal Tracker",
   description: "Track and achieve personal goals",
   category: "Productivity",
-  image: "",
+  image: "placeholder.png",
   link: ""
 },
 {
   title: "Bill Splitter",
   description: "Split bills among multiple people",
   category: "Utility",
-  image: "",
+  image: "square-image.jpg",
   link: ""
 },
 {
   title: "Fintech Dashboard",
   description: "Mobile finance app UI screens",
   category: "Mobile App",
-  image: "",
+  image: "placeholder.png",
   link: ""
 },
 {
   title: "E-Commerce UI Kit",
   description: "Shop screens with onboarding and input forms",
   category: "Web UI",
-  image: "",
+  image: "square-image.jpg",
   link: ""
 }
 ];
@@ -65,15 +65,14 @@ function displayMyProjects(projectsList)
   myProjects.innerHTML = ""; 
 
 
-
   if (projectsList.length === 0) {
-  myProjects.innerHTML = "<h6>No data found</h6>";
+  myProjects.innerHTML = "<h4> No data found</h4>";
   return;
 }
-  projectsList.forEach(element => {
   
 
-myProjects.innerHTML +=`
+ const projectHtml =  projectsList.map(function(element){ 
+  return `
 <article class="projectCard">
         <div class="featured-image-wrapper">
   <img src=${element.image} alt="This is a photo to show featured project" />
@@ -87,9 +86,13 @@ myProjects.innerHTML +=`
     </article>
     `;
     
-  });
+  }).join("");
 
 
+
+  myProjects.innerHTML = projectHtml;
+
+}
 
 
 searchInput.addEventListener("input",() => {
@@ -104,4 +107,3 @@ searchInput.addEventListener("input",() => {
   displayMyProjects(filteredProjects);
 
   });
-}
