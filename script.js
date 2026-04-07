@@ -2,61 +2,10 @@ const myProjects = document.getElementById("my_projects");
 
 const searchInput = document.getElementById("searchInput");
 
-const projectsList = [
+let  projectsList = [];
 
-    {
-  title: "Study Planner App",
-  description: "Track daily study tasks and progress",
-  category: "Productivity",
-  image: "square-image.jpg",
-  link: ""
-},
-{
-  title: "Expense Tracker",
-  description: "Manage income and expenses",
-  category: "Finance",
-  image: "placeholder.png",
-  link: ""
-},
-{
-  title: "Event Planner",
-  description: "Create and manage events",
-  category: "Organization",
-  image: "square-image.jpg",
-  link: ""
-},
-{
-  title: "Goal Tracker",
-  description: "Track and achieve personal goals",
-  category: "Productivity",
-  image: "placeholder.png",
-  link: ""
-},
-{
-  title: "Bill Splitter",
-  description: "Split bills among multiple people",
-  category: "Utility",
-  image: "square-image.jpg",
-  link: ""
-},
-{
-  title: "Fintech Dashboard",
-  description: "Mobile finance app UI screens",
-  category: "Mobile App",
-  image: "placeholder.png",
-  link: ""
-},
-{
-  title: "E-Commerce UI Kit",
-  description: "Shop screens with onboarding and input forms",
-  category: "Web UI",
-  image: "square-image.jpg",
-  link: ""
-}
-];
-
-displayMyProjects(projectsList);
-
+//displayMyProjects(projectsList);
+loadProjects()
 
 
 function displayMyProjects(projectsList)
@@ -107,3 +56,20 @@ searchInput.addEventListener("input",() => {
   displayMyProjects(filteredProjects);
 
   });
+
+
+
+  async function loadProjects() {
+  try {
+    const response = await fetch('https://raw.githubusercontent.com/kaursharanjeetofficial-cmd/first-assigment/main/projects.json'); 
+    const data = await response.json();
+
+
+    projectsList=data;
+
+    displayMyProjects(projectsList);
+  } catch (error) {
+    console.error('Errr: There is some problem', error);
+  }
+}
+
